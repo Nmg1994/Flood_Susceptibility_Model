@@ -1,4 +1,177 @@
-# Flood_Susceptibility_Model
-Floods are one of the most perilous natural calamities that cause property destruction and endanger human life. The spatial patterns of flood susceptibility were assessed in this study using six applied machine learning (ML) models including Decision Tree (DT), Random Forest (RF), Multilayer Perceptron Neural Network (MLP-NN), Adaptive Boosting (AdaBoost), Logistic Regression (LR), and Support Vector Machines (SVM).The flood susceptibility map, as the principal output of this study, was produced using these six ML models in five classes ranging from very low to very high susceptibility.
+# Flood Susceptibility Mapping Using Geospatial Variables and Machine Learning
+## Overview
+
+This repository presents a comprehensive flood susceptibility assessment framework that integrates high-resolution geospatial data, hydrological and meteorological variables, and multiple machine learning algorithms to identify areas vulnerable to flooding.
+
+The study compares six widely used machine learning models and investigates the influence of environmental factors on flood occurrence. The resulting flood susceptibility maps can support disaster risk reduction, land-use planning, infrastructure development, and flood mitigation strategies.
+
+## Research Objectives
+
+The primary objectives of this project are to:
+
+Develop accurate flood susceptibility maps using machine learning techniques.
+Compare the predictive performance of multiple machine learning models.
+Identify the most influential flood conditioning factors.
+Analyze spatial relationships between environmental variables and flood occurrence.
+Provide decision-support tools for flood risk management and planning.
+
+## Study Workflow
+Flood Inventory Data
+           │
+           ▼
+Data Preparation
+           │
+           ▼
+Flood Conditioning Factors
+           │
+           ▼
+Multicollinearity Analysis
+           │
+           ▼
+Machine Learning Models
+           │
+           ▼
+Model Evaluation
+           │
+           ▼
+Flood Susceptibility Mapping
+           │
+           ▼
+Factor Importance Analysis
+
+## Dataset
+### Flood Inventory Map
+
+The flood inventory dataset consists of:
+
+Category	Number of Samples
+Flood Locations	180
+Non-Flood Locations	180
+Total Samples	360
+
+The dataset was randomly divided into:
+
+70% Training Data
+30% Testing Data
+
+### Flood Conditioning Factors
+
+A total of 16 meteorological, hydrological, and geospatial variables were initially considered.
+
+After multicollinearity analysis, 13 variables were retained for modeling.
+
+Examples of conditioning factors include:
+
+Elevation
+Slope
+Aspect
+Curvature
+Lithology
+Soil Type
+Land Cover
+Rainfall
+Distance from Rivers
+Drainage Density
+NDMI (Normalized Difference Moisture Index)
+Topographic Wetness Index (TWI)
+Stream Power Index (SPI)
+Digital Elevation Model (DEM)
+
+## Machine Learning Models
+
+Six machine learning algorithms were implemented and compared:
+
+🌳 Decision Tree (DT)
+
+A tree-based classification approach that recursively partitions the data based on predictor variables.
+
+🌲 Random Forest (RF)
+
+An ensemble learning method combining multiple decision trees to improve predictive performance and reduce overfitting.
+
+🧠 Multilayer Perceptron Neural Network (MLP-NN)
+
+A feedforward artificial neural network capable of modeling complex nonlinear relationships.
+
+🚀 Adaptive Boosting (AdaBoost)
+
+An ensemble boosting technique that improves prediction by focusing on previously misclassified samples.
+
+📈 Logistic Regression (LR)
+
+A statistical classification model estimating flood occurrence probabilities.
+
+🎯 Support Vector Machine (SVM)
+
+A supervised learning method that identifies optimal decision boundaries between flood and non-flood classes.
+
+## Model Evaluation
+
+Five statistical metrics were used to evaluate model performance:
+
+Metric	Description
+ROC-AUC	Receiver Operating Characteristic Curve
+Jaccard Index	Similarity between predicted and observed floods
+F1 Score	Harmonic mean of precision and recall
+Overall Accuracy (OA)	Classification accuracy
+Kappa Coefficient (K)	Agreement beyond chance
+
+## Key Findings
+Best Performing Model
+
+Among all tested algorithms:
+
+🏆 Random Forest (RF) achieved the highest predictive accuracy and demonstrated superior generalization capability.
+
+Most Influential Flood Conditioning Factors
+
+Based on Frequency Ratio (FR) analysis and Spearman correlation analysis, the most important flood drivers were:
+
+Lithology
+Drainage Density
+Distance from Rivers
+Soil Type
+Rainfall
+Land Cover
+NDMI
+
+These variables showed the strongest relationships with flood occurrence.
+
+## Flood Susceptibility Mapping
+
+The final susceptibility map was classified into five categories:
+
+Susceptibility Class	Area Coverage
+Very High	19.73%
+High	15.49%
+Moderate	16.15%
+Low	18.72%
+Very Low	29.91%
+
+## Interpretation
+
+The Random Forest flood susceptibility map indicates that:
+
+Approximately 35.22% of the study area falls within the high to very high flood susceptibility classes.
+Nearly one-fifth of the region exhibits extremely high flood risk.
+Flood-prone areas are strongly associated with river proximity, drainage characteristics, geological conditions, and precipitation patterns.
+Variable Importance Analysis
+
+To improve interpretability, flood conditioning factors were:
+
+Reclassified using the Quantile Classification Method
+Evaluated using the Frequency Ratio (FR) Method
+Analyzed using Spearman Correlation Analysis
+
+This approach enabled the identification of the most critical environmental conditions associated with flooding.
+
+## Key outputs generated by the project include:
+
+Flood susceptibility maps
+Machine learning performance comparison
+Feature importance rankings
+Correlation analysis results
+Spatial distribution of flood-prone areas
+Risk classification maps
 
 Due to the large size of the input layers (flood conditioning factors), all were uploaded in Google Drive; they can be downloaded from the following link: [https://drive.google.com/file/d/1t4lz41e5ttFzV2HLxsc9iAAZ44OPAo2J/view?usp=sharing](https://drive.google.com/drive/folders/1jacNmkHtwMXZ5PkM7ga4qQKurRDh4xxU?usp=sharing)
